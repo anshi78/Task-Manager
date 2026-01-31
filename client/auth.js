@@ -1,9 +1,7 @@
 console.log("✅ auth.js loaded");
 
-const API_URL = "https://task-manager-0qjo.onrender.com";
-
-fetch(`${API_URL}/api/auth/login`)
-
+// ✅ ONE VARIABLE, USED EVERYWHERE
+const API_BASE_URL = "https://task-manager-0qjo.onrender.com/api/auth";
 
 // ================= LOGIN =================
 document.getElementById("loginForm").addEventListener("submit", async (e) => {
@@ -35,7 +33,7 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
 
   } catch (err) {
     console.error(err);
-    alert("Backend not running");
+    alert("Backend not reachable");
   }
 });
 
@@ -70,6 +68,6 @@ document.getElementById("registerForm").addEventListener("submit", async (e) => 
 
   } catch (err) {
     console.error(err);
-    alert("Backend not running");
+    alert("Backend not reachable");
   }
 });
