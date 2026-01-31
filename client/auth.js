@@ -1,6 +1,9 @@
 console.log("✅ auth.js loaded");
 
-const API_BASE_URL = "https://task-manager-0qjo.onrender.com";
+const API_URL = "https://task-manager-0qjo.onrender.com";
+
+fetch(`${API_URL}/api/auth/login`)
+
 
 // ================= LOGIN =================
 document.getElementById("loginForm").addEventListener("submit", async (e) => {
